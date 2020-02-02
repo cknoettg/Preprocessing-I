@@ -142,7 +142,7 @@ nav {
 	/* float: right; */
   justify-content: space-between;
   /* margin-left: auto;
-  margin-right: 0; */ */
+  margin-right: 0; */
 }
 
 div {
@@ -199,14 +199,10 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* troubleshooting border */
-  border: 1px solid red; 
 }
 
 .skills div {
   width: 40%;
-  /* troubleshooting border */
-  border: 1px solid blue;
 }
 
 .skills h5 {
@@ -225,7 +221,33 @@ li {
   padding: 2%;
 }
 
+th {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+/* table element in reset has margin, border, and padding set to 0 and
+vertical-align: baseline */
+table {
+  border-spacing: 20px 0px;
+  padding: 20%;
+}
+
+tr:nth-child(even) {
+  background: lightgrey;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
 footer {
   padding: 2%;
   text-align: center;
+  background-color: gray;
+  color: white;
 }
