@@ -138,8 +138,11 @@ body {
 
 /* My CSS Additions */
 nav {
-	display: flex;
+  display: flex;
+	/* float: right; */
   justify-content: space-between;
+  /* margin-left: auto;
+  margin-right: 0; */ */
 }
 
 div {
@@ -168,6 +171,11 @@ h1 {
   font-size: 48px;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+
+h3 {
+  font-size: 30px;
+  padding-bottom: 2%;
 }
 
 h5 {
@@ -201,7 +209,23 @@ button {
   border: 1px solid blue;
 }
 
-h3 {
-  font-size: 30px;
-  padding-bottom: 2%;
+.skills h5 {
+  text-align: center;
+}
+
+li {
+  border: 1px solid lightgrey;
+  text-align: center;
+}
+
+.work-history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+footer {
+  padding: 2%;
+  text-align: center;
 }
