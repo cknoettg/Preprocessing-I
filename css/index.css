@@ -140,31 +140,68 @@ body {
 nav {
 	display: flex;
   justify-content: space-between;
-  margin-left: auto;
-  padding: 2%;
+}
+
+div {
+  padding-bottom: 2%;
 }
 
 .intro {
   display: flex;
   flex-direction: column;
-  /* troubleshooting border */
-  border: 1px solid red;
+  background-color: lightgrey;
+  margin: 5%;
+  padding: 5%;
+}
+
+.intro p {
+  font-size: 20px;
+  padding-bottom: 2%;
 }
 
 img {
-  width:20%;
+  height: 5%;
+  width: 30%;
 }
 
 h1 {
+  font-size: 48px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+h5 {
   font-size: 30px;
+  padding-bottom: 2%;
 }
 
 button {
-	background-color:white;
+  background-color: grey;
+  color: white;
 	font-family: inherit;
 	border: 1px solid black;
 	border-radius: 5px;
 	height: 40px;
 	width: 200px;	
 	text-align: center;	
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* troubleshooting border */
+  border: 1px solid red; 
+}
+
+.skills div {
+  width: 40%;
+  /* troubleshooting border */
+  border: 1px solid blue;
+}
+
+h3 {
+  font-size: 30px;
+  padding-bottom: 2%;
 }
