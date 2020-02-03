@@ -48,6 +48,13 @@ table {
 	border-spacing: 0;
 }
 
+/* Added variables for font stack and color */
+/* Added mixins */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@main-font: 'Open Sans', sans-serif;
+@main-color: lightgrey;
+@darkgreys: gray;
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -55,10 +62,11 @@ table {
 
 html, body {
 	height: 100%;
+	font-family: @main-font;
 	/* background-color: red; */
 }
 
-/* My CSS Additions */
+/* My CSS Additions - Using Nesting */
 	nav {
 		display: flex;
 		justify-content: flex-end;
@@ -79,7 +87,7 @@ html, body {
 	.intro {
 	display: flex;
 	flex-direction: column;
-	background-color: lightgrey;
+	background-color: @main-color;
 	margin: 5%;
 	padding: 5%;
 
@@ -109,7 +117,7 @@ html, body {
 			} //end of .intro h5
 
 		button {
-			background-color: grey;
+			background-color: @darkgreys;
 			color: white;
 			font-family: inherit;
 			border: 1px solid black;
@@ -129,6 +137,7 @@ html, body {
 		width: 50%;
 		justify-content: center;
 		align-items: center;
+		padding: 5%;
 		} //end of .skills div
 
 		h3 {
@@ -145,10 +154,11 @@ html, body {
 		ul {
 			display: flex;
 			flex-direction: column;
+			padding: 5%;
 		} //end of .skills ul
 
 		li {
-			border: 1px solid lightgrey;
+			border: 1px solid @main-color;			
 			text-align: center;
 		} //end of .skills li
 	} //end of .skils
@@ -165,13 +175,13 @@ html, body {
 		} //end of table
 		
 		th {
-			border-top: 1px solid grey;
-			border-bottom: 1px solid grey;
+			border-top: 1px solid @darkgreys;
+			border-bottom: 1px solid @darkgreys;
 			padding: 1%;
 		} //end of th
 	
 		tr:nth-child(even) {
-			background: lightgrey;
+			background: @main-color;
 		} //end of tr
 	
 		td {
@@ -194,6 +204,6 @@ html, body {
 	footer {
 		padding: 1%;
 		text-align: center;
-		background-color: gray;
+		background-color: @darkgreys;
 		color: white;
 	}
