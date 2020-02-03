@@ -264,25 +264,36 @@ li {
 
 .work-history {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   padding: 2%;
-}
-
-th {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
 }
 
 /* table element in reset has margin, border, and padding set to 0 and
 vertical-align: baseline */
 table {
-  border-spacing: 20px 5px;
+  /* border-collapse: separate; */
+  /* border-spacing: 20px 5px; */
   padding: 20%;
+  width: 100%;
+  justify-content: center; 
+  align-items: center;
+}
+
+th {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 1%;
 }
 
 tr:nth-child(even) {
   background: lightgrey;
+}
+
+/* columns */
+td {
+  padding: 1%;
+  /* border-spacing: 5px 5px; */
 }
 
 .contact {
