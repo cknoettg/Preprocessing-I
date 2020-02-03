@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html,
 body,
 div,
@@ -126,10 +127,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -140,9 +143,28 @@ body {
 nav {
   display: flex;
 	/* float: right; */
-  justify-content: space-between;
-  /* margin-left: auto;
-  margin-right: 0; */
+  justify-content: flex-end;
+  /* margin-right: auto; */
+  /* temporary troubleshooting border */
+  /* border: 1px  solid red; */
+  margin-left: auto;
+  width: 40%;
+  padding: 1%;
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  margin-left: auto;
+  padding: 0 2px;
+  border-spacing: 0 5px;
+  /* width: 1px; */
+  /* float: right; */
+  /* word-spacing: 2px; */
+  /* letter-spacing: 2px; */
+  /* temporary troubleshooting border */
+  /* border: 1px  solid blue; */
 }
 
 div {
@@ -197,12 +219,12 @@ button {
 .skills {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
 .skills div {
-  width: 40%;
+  width: 20%;
 }
 
 .skills h5 {
@@ -229,7 +251,7 @@ th {
 /* table element in reset has margin, border, and padding set to 0 and
 vertical-align: baseline */
 table {
-  border-spacing: 20px 0px;
+  border-spacing: 20px 5px;
   padding: 20%;
 }
 
@@ -240,9 +262,13 @@ tr:nth-child(even) {
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   padding: 10%;
+}
+
+address {
+  text-align: center;
 }
 
 footer {
