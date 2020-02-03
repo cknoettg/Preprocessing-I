@@ -57,3 +57,143 @@ html, body {
 	height: 100%;
 	/* background-color: red; */
 }
+
+/* My CSS Additions */
+	nav {
+		display: flex;
+		justify-content: flex-end;
+		margin-left: auto;
+		width: 40%;
+		padding: 1%;
+
+		a {
+			display: flex;
+			flex-direction: row;
+			margin-left: auto;
+			padding: 0 2px;
+			border-spacing: 0 5px;
+			
+			} //end of nav a element
+	} // end of nav
+
+	.intro {
+	display: flex;
+	flex-direction: column;
+	background-color: lightgrey;
+	margin: 5%;
+	padding: 5%;
+
+		div {
+			padding-bottom: 2%;
+		} //end of .intro div
+
+		p {
+			font-size: 20px;
+			padding-bottom: 2%;
+			} //end of .intro p
+
+		img {
+			height: 5%;
+			width: 30%;
+			} //end of .intro img
+
+		h1 {
+			font-size: 48px;
+			padding-top: 1%;
+			padding-bottom: 1%;
+			} //end of .intro h1
+
+		h5 {
+			font-size: 30px;
+			padding-bottom: 2%;
+			} //end of .intro h5
+
+		button {
+			background-color: grey;
+			color: white;
+			font-family: inherit;
+			border: 1px solid black;
+			border-radius: 5px;
+			height: 40px;
+			width: 200px;	
+			text-align: center;	
+			} //end of .intro button
+	} // end of .intro	
+
+	.skills {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+		div {
+		width: 50%;
+		justify-content: center;
+		align-items: center;
+		} //end of .skills div
+
+		h3 {
+			font-size: 30px;
+			padding-bottom: 2%;
+		} //end of .skills h3
+
+		h5 {
+			font-size: 30px;
+			padding-bottom: 2%;
+			text-align: center;
+		} //end of .skills h5
+
+		ul {
+			display: flex;
+			flex-direction: column;
+		} //end of .skills ul
+
+		li {
+			border: 1px solid lightgrey;
+			text-align: center;
+		} //end of .skills li
+	} //end of .skils
+
+	.work-history {
+		display: flex;
+		padding: 2%;
+
+		table {
+			padding: 20%;
+			width: 100%;
+			justify-content: center; 
+			align-items: center;
+		} //end of table
+		
+		th {
+			border-top: 1px solid grey;
+			border-bottom: 1px solid grey;
+			padding: 1%;
+		} //end of th
+	
+		tr:nth-child(even) {
+			background: lightgrey;
+		} //end of tr
+	
+		td {
+			padding: 1%;
+		} //end of td
+	} //end of .work-history	
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+		align-items: center;
+		padding: 1%;
+
+		address {
+			text-align: center;
+		} //end of address
+	} //end of contact	
+
+	footer {
+		padding: 1%;
+		text-align: center;
+		background-color: gray;
+		color: white;
+	}
