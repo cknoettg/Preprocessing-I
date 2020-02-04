@@ -55,6 +55,15 @@ table {
 @main-color: lightgrey;
 @darkgreys: gray;
 
+/* template, planning for media query */
+/* 	Make nav bar a column
+	Center intro items
+	Optimize table for mobile
+	*/
+/* @media (max-width: 500px) {
+
+} */
+
 .center(){
 	display: flex;
 	justify-content: center;
@@ -87,9 +96,15 @@ html, body {
 			flex-direction: row;
 			margin-left: auto;
 			padding: 0 2px;
-			border-spacing: 0 5px;
-			
+			border-spacing: 0 5px;			
 			} //end of nav a element
+		
+		@media (max-width: 500px) {
+			.center();
+			flex-direction: column;
+			margin: 0;
+			width: 50%;
+		}//end of media query
 	} // end of nav
 
 	.intro {
@@ -101,6 +116,12 @@ html, body {
 
 		div {
 			padding-bottom: 2%;
+			@media (max-width: 500px) {
+				.center();
+				flex-direction: column;
+				align-items: center;
+				.text-center();
+			} //end of media query
 		} //end of .intro div
 
 		p {
@@ -111,6 +132,11 @@ html, body {
 		img {
 			height: 5%;
 			width: 30%;
+
+			@media (max-width: 500px) {
+				width:100%;
+			}//end of media query
+
 			} //end of .intro img
 
 		h1 {
@@ -133,7 +159,16 @@ html, body {
 			height: 40px;
 			width: 200px;	
 			.text-center();	
+
+			@media (max-width: 500px) {
+				display: flex;
+				justify-content: center;
+			} //end of media query
 			} //end of .intro button
+		
+		@media (max-width: 500px) {
+			justify-content: center;
+		} //end of media query
 	} // end of .intro	
 
 	.skills {
@@ -142,12 +177,15 @@ html, body {
 	align-items: center;
 
 		div {
-		width: 50%;
-		justify-content: center;
-		align-items: center;
+		.center();
+		flex-direction: column;
 		padding: 5%;
+		width: 50%;
 		} //end of .skills div
 
+		div:last-child {
+			align-items:center;
+		}
 		h3 {
 			font-size: 30px;
 			padding-bottom: 2%;
@@ -160,9 +198,10 @@ html, body {
 		} //end of .skills h5
 
 		ul {
-			display: flex;
+			.center();
 			flex-direction: column;
 			padding: 5%;
+			width: 50%;
 		} //end of .skills ul
 
 		li {
@@ -180,21 +219,78 @@ html, body {
 			width: 100%;
 			justify-content: center; 
 			align-items: center;
+
+			@media (max-width: 500px) {
+				display: block;
+			} //end of media query
 		} //end of table
 		
 		th {
 			border-top: 1px solid @darkgreys;
 			border-bottom: 1px solid @darkgreys;
 			padding: 1%;
+
+			@media (max-width: 500px) {
+				display: none;
+			} //end of media query
 		} //end of th
-	
+
 		tr:nth-child(even) {
 			background: @main-color;
+
 		} //end of tr
 	
 		td {
 			padding: 1%;
+
+			@media (max-width: 500px) {
+				display: block;
+				border: none;
+				border-bottom: 1px solid #eee; 
+				position: relative;
+				padding-left: 50%;
+			} //end of media query
 		} //end of td
+
+		td:before {
+			@media (max-width: 500px) {
+				display: block;
+				position: absolute;
+				top: 6px;
+				left: 6px;
+				width: 45%; 
+				padding-right: 10px; 
+				white-space: nowrap;
+			} //end of media query
+		} //end of td:before
+
+		td:nth-of-type(1):before { 
+			@media (max-width: 500px) {
+				content: "Yrs";
+			}
+		}
+
+		td:nth-of-type(2):before { 
+			@media (max-width: 500px) {
+				content: "Company";
+			}
+		}
+
+		td:nth-of-type(3):before { 
+			@media (max-width: 500px) {
+				content: "Title";
+			}
+		}
+
+		td:nth-of-type(4):before { 
+			@media (max-width: 500px) {
+				content: "Tech Used";
+			}
+		}
+		
+		@media (max-width: 500px) {
+			display: block;
+		} //end of media query
 	} //end of .work-history	
 
 	.contact {

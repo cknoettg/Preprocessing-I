@@ -135,6 +135,14 @@ table {
   font-display: swap;
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
 }
+/* template, planning for media query */
+/* 	Make nav bar a column
+	Center intro items
+	Optimize table for mobile
+	*/
+/* @media (max-width: 500px) {
+
+} */
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -160,6 +168,15 @@ nav a {
   padding: 0 2px;
   border-spacing: 0 5px;
 }
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    width: 50%;
+  }
+}
 .intro {
   display: flex;
   flex-direction: column;
@@ -170,6 +187,15 @@ nav a {
 .intro div {
   padding-bottom: 2%;
 }
+@media (max-width: 500px) {
+  .intro div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .intro p {
   font-size: 20px;
   padding-bottom: 2%;
@@ -177,6 +203,11 @@ nav a {
 .intro img {
   height: 5%;
   width: 30%;
+}
+@media (max-width: 500px) {
+  .intro img {
+    width: 100%;
+  }
 }
 .intro h1 {
   font-size: 48px;
@@ -197,16 +228,31 @@ nav a {
   width: 200px;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .intro button {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .intro {
+    justify-content: center;
+  }
+}
 .skills {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .skills div {
-  width: 50%;
+  display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 5%;
+  width: 50%;
+}
+.skills div:last-child {
+  align-items: center;
 }
 .skills h3 {
   font-size: 30px;
@@ -219,8 +265,10 @@ nav a {
 }
 .skills ul {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 5%;
+  width: 50%;
 }
 .skills li {
   border: 1px solid lightgrey;
@@ -236,16 +284,71 @@ nav a {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .work-history table {
+    display: block;
+  }
+}
 .work-history th {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding: 1%;
+}
+@media (max-width: 500px) {
+  .work-history th {
+    display: none;
+  }
 }
 .work-history tr:nth-child(even) {
   background: lightgrey;
 }
 .work-history td {
   padding: 1%;
+}
+@media (max-width: 500px) {
+  .work-history td {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .work-history td:before {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .work-history td:nth-of-type(1):before {
+    content: "Yrs";
+  }
+}
+@media (max-width: 500px) {
+  .work-history td:nth-of-type(2):before {
+    content: "Company";
+  }
+}
+@media (max-width: 500px) {
+  .work-history td:nth-of-type(3):before {
+    content: "Title";
+  }
+}
+@media (max-width: 500px) {
+  .work-history td:nth-of-type(4):before {
+    content: "Tech Used";
+  }
+}
+@media (max-width: 500px) {
+  .work-history {
+    display: block;
+  }
 }
 .contact {
   display: flex;
